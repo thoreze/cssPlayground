@@ -107,6 +107,10 @@ main {
   width: 50em;
   transition: width 0.3s 0.3s ease;
 }
+@media(max-width: 500px){
+  #verne{
+    width: 100%;
+}}
 /* unten beschreiben wir, was beim hovern über das Bild passiert. Oben (transition) zeigt an, wie der Übergang funktioniert.
   Hier dauert die Vergrößerung 0.9 Sekunden und es startet erst(ease) nach 0.5 Sekunden */
 #verne:hover {
