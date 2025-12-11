@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="rafael.png" />
+    <title>HTML Advanced</title>
+    <style>
+      input {
+        width: 200px;
+        background-color: aquamarine;
+      }
+      table {
+        width: 100%;
+        border: 1px solid #ccc;
+      }
+      /* Weite ist 100% und passt sich dem Bildschirm an */
+      tr th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f5f5f5;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Navigation</h2>
+    <p>
+      Damit wir auf einer Seite per Klick direkt zu den gewünschten Abschnitten
+      navigieren können, müssen wir die Abschnitte bearbeiten und zudem eine
+      Navigationsliste erstellen.
+    </p>
+    <p>
+      Die folgende Liste ist in einem &lt;nav&gt; Element und darin befinden
+      sich a-Tags. Die Überschriften müssen mit einer id versehen werden. So hat
+      die Überschift "Tabellen" die id=tabellen. Das ist nichts anderes als eine
+      class, also eine Benennung.
+    </p>
+
+    <!-- Hier ist der neue Code -->
+    <nav>
+      <ul>
+        <li><a href="#tabellen">Tabellen</a></li>
+        <li><a href="#video">Videos</a></li>
+        <li><a href="#inputBoxen">Input Boxen</a></li>
+        <li><a href="#dropdown">Dropdown Menü</a></li>
+      </ul>
+    </nav>
+    <p>
+      In der Datei mit den Diversen
+      <a href="4.8 - CSSHomepage.html">CSS</a> Elementen ist die
+      Navigation zudem ansprechend gestyled
+    </p>
+    <!-- Hier endet der neue Code -->
+
+    <br /><br /><br />
+    <br />
+    <hr />
+    <br /><br /><br />
+
+    <h2 id="tabellen">Tabellen</h2>
+    <p>
+      Tabellen benötigen viel CSS und "gut" auszusehen. Die Attribute dafür sind
+      aber zum Teil bereits bekannt, denn width height padding font-size usw.
+      können hier benutzt werden. Ich kann im CSS sowohl die ganze Tabelle
+      (table{...}) ansteuern oder auch nur die einzelnen Zeilen oder Spalten
+      (th{...} oder td{...})
+    </p>
+    <!-- Hier ist der neue Code -->
+
+    <table>
+      <tr>
+        <th>erste Überschrift</th>
+        <td>erster Inhalt</td>
+      </tr>
+      <tr>
+        <th>Überschrift</th>
+        <td>Inhalt</td>
+      </tr>
+      <tr>
+        <th>Überschrift</th>
+        <td>Inhalt</td>
+      </tr>
+      <tr>
+        <th>Überschrift</th>
+        <td>Inhalt</td>
+      </tr>
+    </table>
+    <p>Oder umgedreht</p>
+    <table>
+      <tr>
+        <th>Überschrift 1</th>
+        <th>Überschrift 2</th>
+      </tr>
+      <tr>
+        <td>Zelle 1</td>
+        <td>Zelle 2</td>
+      </tr>
+      <tr>
+        <td>Zelle 2</td>
+        <td>Zelle 3</td>
+      </tr>
+    </table>
+    <!-- Hier endet der neue Code -->
+
+    <br />
+    <hr />
+    <br /><br /><br />
+
+    <h2 id="video">Videos</h2>
+    <p>
+      Am einfachsten ist es, einfach ein Youtube Video zu verwenden. Wenn man
+      einem Youtube Video auf "teilen" klickt, dann erscheint "einbetten". Dort
+      ist ein iframe-Tag. Diesen muss man nur kopieren oder hier einffügen.
+      <br />Alternativ macht man einen Rechtsklick auf ein Video und dort kann
+      man ebenso das "Einbetten" auswählen. "
+    </p>
+    <!-- Hier endet der neue Code -->
+
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/PL3Odw-k8W4?si=O_8b-KuCQzRJdSK8"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+    <!-- Die CSS Elemente sind hier direkt mit dabei -->
+    <video src=""></video>
+    <!-- Der Video Tag ist eine Alternative und wird wie der img Tag verwendet. Das Video sollte runtergeladen sein und sich auch in diesem Ordner befinden. -->
+
+    <!-- Hier endet der neue Code -->
+
+    <br />
+    <hr />
+    <br /><br /><br />
+
+    <h2 id="inputBoxen">Input Boxen</h2>
+    <p>
+      Sobald ich den type ändere, ändert sich auch die Input Box. Damit wirklich
+      etwas "passiert" oder damit man die Werte abschicken kann, benötigt man
+      javascript.
+    </p>
+    <!-- Hier ist der neue Code -->
+
+    <input type="text" placeholder="Vorname" />
+    <input type="text" placeholder="Nachname" />
+    <input type="date" />
+    <input type="file" />
+    <input type="submit" name="submitButton" id="submit" />
+    <p>volljährig?<input type="checkbox" name="done" id="check1" /></p>
+    <!-- Hier endet der neue Code -->
+
+    <br />
+    <hr />
+    <br /><br /><br />
+    <!-- Hier ist der neue Code -->
+
+    <h2 id="dropdown">Dropdown Menü</h2>
+    <label for="Beruf">Was ist dein Beruf?</label>
+    <!-- Der label Tag ist nicht notwendig für das Dropdown Menü.
+     Die erste Option wird immer angezeigt, wenn die Seite geladen wird. -->
+    <select name="Lehrer" id="Lehrer1">
+      <option value="Schüler">Ich bin Schüler</option>
+      <option value="Arbeitslos">Ich bin arbeitslos</option>
+      <option value="Angestellter">Ich bin Angestellter</option>
+    </select>
+    <!-- Hier endet der neue Code -->
+    <br />
+    <hr />
+    <br /><br /><br />
+
+    <h2>Navigation zwischen Dokumenten</h2>
+
+    <a href="#">Dieser Link für wieder nach oben</a>
+    <p>Ein einfacher # im a Tag bzw. im href.</p>
+    <a href="https://www.youtube.com/?gl=DE&hl=de" target="_blank">Youtube</a>
+    <p>
+      Hier ist ein einfacher Link, der aber in einem neuen Tab öffnet. Das ist
+      oft angenehmer.
+    </p>
+    <a href="4.8 - DiverseNeueCSSElemente.html">CSS Datei</a>
+    <p>Hier geht es zu einer anderen Website, die auch von mir ist.</p>
+
+    <br />
+    <hr />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </body>
+</html>
