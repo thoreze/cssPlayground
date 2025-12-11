@@ -53,7 +53,7 @@ h1{
 /* clamp (dies ist eine Funktion) hat drei Werte, den minimalen, preferierten und den maximalen.
 Auch calc() ist eine Funktion. Das ergebnis ändert sich dynamisch, da die Werte auch relativ sind.  */
 h2 {
-  font-size: 3px;
+  font-size: clamp(1rem, calc(7vw + 0.5rem), 3rem);
 }
 h2::before{
   counter-increment: Nr;
