@@ -288,7 +288,7 @@ input:focus{
 .flexboxPseudoKlein{
   border: solid;
   background-color: rgb(0, 0, 0);
-  width: clamp(12em, 20em, 40em);
+  width: clamp(10em, 12em, 20em);
   padding: 3px;
   background-image: url(Roshi_GT.webp);
   background-size: contain;
