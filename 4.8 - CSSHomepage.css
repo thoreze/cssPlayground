@@ -104,7 +104,7 @@ main {
 }
 /* box-shadow macht einen Schatten um das Bild. 5px nach rechts, 10px nach unten, 20px ist das Auslaufen des Schattens, red ist die Farbe */
 #verne {
-  width: 40em;
+  width: clamp(10em, 40em, 45em);
   transition: width 0.3s 0.3s ease;
 }
 @media(max-width: 500px){
@@ -114,7 +114,7 @@ main {
 /* unten beschreiben wir, was beim hovern über das Bild passiert. Oben (transition) zeigt an, wie der Übergang funktioniert.
   Hier dauert die Vergrößerung 0.9 Sekunden und es startet erst(ease) nach 0.5 Sekunden */
 #verne:hover {
-  width: 50em;
+  width: clamp(12em, 45em, 50em);
 }
 /* Das ...:hover nennen wir eine Pseudoklasse */
 #verne:active {
