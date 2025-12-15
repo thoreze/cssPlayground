@@ -321,7 +321,7 @@ input:focus{
   width: 100vw;
 }
 .flexboxOverflowKleinScroll{
-  width: clamp(5em, 10em, 20em);
+  width: clamp(5em, 12em, 20em);
   max-height: 150px;
   background-color: rgb(0, 0, 0);
   border: solid;
@@ -330,7 +330,7 @@ input:focus{
   margin: 1em;
 }
 .flexboxOverflowKleinHidden{
-  width: clamp(15em, 20em, 40em);
+  width: clamp(5em, 12em, 20em);
   max-height: 150px;
   background-color: rgb(0, 0, 0);
   border: solid;
@@ -341,7 +341,7 @@ input:focus{
 
 }
 .flexboxOverflowKleinVisible{
-  width: clamp(15em, 20em, 40em);
+  width: clamp(5em, 12em, 20em);
   max-height: 150px;
   background-color: rgb(0, 0, 0);
   border: solid;
