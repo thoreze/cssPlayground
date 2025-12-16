@@ -251,31 +251,36 @@
       </div>
       <!-- Positionen -->
       <div id="absolut" class="contentBox">
-        <h2>Positionen</h2>
-        <p>
-          Wir haben mehrere Werte, die wir hinter das Attribut
-          <em>position:</em> einfügen können.
-        </p>
-        <ul style="font-size: 20px">
-          <li>
-            <strong>relative:</strong> Verne, der unten außerhalb der Box steht.
-          </li>
-          <li>
-            <strong>absolute:</strong> Verne, der vor oder unter der
-            Hauptüberschrift auftaucht.
-          </li>
-          <li><strong>fixed:</strong> Der "top" Button, rechts unten.</li>
-        </ul>
+        <div class="stickyBox">
+          <div class="stickyBoxLeft">
+            <h2 style="text-align: center;">Positionen</h2>
+            <p>
+              Wir haben mehrere Werte, die wir hinter das Attribut
+              <em>position:</em> einfügen können.
+            </p>
+            <ul style="font-size: 20px">
+              <li>
+                <strong>relative:</strong> Verne, der unten außerhalb der Box steht.
+              </li>
+              <li>
+                <strong>absolute:</strong> Verne, der vor oder unter der
+                Hauptüberschrift auftaucht.
+              </li>
+              <li><strong>fixed:</strong> Der "top" Button, rechts unten.</li>
+              <li><strong>sticky:</strong> Schiggi am rechten Rand, der sich bei scrollen mitbewegt.</li>
+            </ul>
 
-        <div class="box">
-          <img id="verne2" src="abdurchdiehecke.png" alt="" />
-        </div>
-        <img id="verne3" src="abdurchdiehecke.png" alt="" />
-        <img id="verne4" src="abdurchdiehecke.png" alt="" />
-
-        <br />
-        <div style="text-align: center">
-          <a href="#">Nach oben</a>
+            <div class="box">
+              <img id="verneBox" src="abdurchdiehecke.png" alt="" />
+            </div>
+            <img id="verneZ1" src="abdurchdiehecke.png" alt="" />
+            <img id="verneZ2" src="abdurchdiehecke.png" alt="" />
+          </div>
+          <div class="stickyBoxRight">
+            <img id="schiggiSticky" src="schiggi.png" alt="">
+          </div>
+          <br />
+          
         </div>
         <div class="sideLink">
           <p
@@ -405,7 +410,7 @@
         </div>
       </div>
       <!-- Overflow -->
-      <div id="overflow" class="contentBox">
+      <div id="overflow" class="contentBox" style="height: 700px;">
         <h2>Overflow</h2>
         <div class="flexboxOverflow">
           <div class="flexboxOverflowKlein" style="overflow: scroll">

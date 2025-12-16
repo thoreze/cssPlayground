@@ -151,8 +151,10 @@ translateY() verschiebt den button etwas beim hovern) */
 
 .box {
   background-color: blanchedalmond;
+  width: 100px;
+  justify-self: center;
 }
-#verne2 {
+#verneBox {
   width: clamp(50px, 100px, 200px);
   top: 50x;
   left: 50px;
@@ -161,7 +163,7 @@ translateY() verschiebt den button etwas beim hovern) */
 /* top und left verschieben das Bild. position: relative verschiebt es relative in der Box.
 Wenn ich absolute eingebe, statt relative, dann verschiebt sich das Bild in die linke obere Ecke der Seite.
 Die farbige Box wird ignoriert. Mit absolute kann ich die Bilder ganz frei auf der Seite positionieren. */
-#verne3 {
+#verneZ1 {
   width: 100px;
   right: 530px;
   top: 80px;
@@ -169,7 +171,7 @@ Die farbige Box wird ignoriert. Mit absolute kann ich die Bilder ganz frei auf d
   z-index: 1;
 }
 /* Dieses Bild ist direkt in der obersten Überschrift. Es hat einen z-index von 1, ist also vor der Überschrift */
-#verne4{      
+#verneZ2{      
   width: 100px;
   right: 920px;
   top: 80px;
@@ -178,6 +180,25 @@ Die farbige Box wird ignoriert. Mit absolute kann ich die Bilder ganz frei auf d
   }  
   /* Der z-index ist -1, Verne ist also hinter der Überschrift */
 
+#schiggiSticky{
+  width: 100px;
+  position: sticky;
+  top: 0;
+  right: 0;
+
+}
+.stickyBox{
+  display: flex;
+}
+.stickyBoxLeft{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 98%;
+}
+.stickyBoxRight{
+width: 1%;
+}
 p {
   transition: all 0.3s ease;
   font-size: 1.5rem;
@@ -327,7 +348,7 @@ input:focus{
 }
 
 .flexboxOverflowKlein{
-  width: clamp(5em, 12em, 20em);
+  width: clamp(5em, 25em, 20em);
   max-height: 150px;
   background-color: rgb(0, 0, 0);
   border: solid;
