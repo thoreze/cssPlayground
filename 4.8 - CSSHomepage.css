@@ -1,3 +1,47 @@
+main {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+p {
+  transition: all 0.3s ease;
+  font-size: 2vw;
+}
+p:hover {
+  color:#FF7A00;
+  transform: scale(1.01);
+}
+li, table{
+  font-size: 2vw;
+}
+h4{
+  font-size: 3vw;
+}
+
+h1{
+  font-size: clamp(3rem, calc(7vw + 2rem), 4rem);
+}
+/* clamp (dies ist eine Funktion) hat drei Werte, den minimalen, preferierten und den maximalen.
+Auch calc() ist eine Funktion. Das ergebnis ändert sich dynamisch, da die Werte auch relativ sind.  */
+h2 {
+  font-size: clamp(1em, calc(4vw + 0.5em), 3em);
+}
+
+h2::before{
+  counter-increment: Nr;
+  content: "Nr. " counter(Nr) ": ";
+}
+body {
+  background-image: url(Roshi_GT.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.895);
+  background-blend-mode: overlay;
+  margin: 0;
+  counter-reset: Nr;
+  color: white;
+}
+/* der letzte Wert der rgba Klammer ist der Opacity Wert  */
 #navBar {
   background-color: #210f878e;
   overflow: hidden;
@@ -46,38 +90,6 @@
     color: white;
   }
 }
-
-h1{
-  font-size: clamp(3rem, calc(7vw + 2rem), 4rem);
-}
-/* clamp (dies ist eine Funktion) hat drei Werte, den minimalen, preferierten und den maximalen.
-Auch calc() ist eine Funktion. Das ergebnis ändert sich dynamisch, da die Werte auch relativ sind.  */
-h2 {
-  font-size: clamp(1em, calc(4vw + 0.5em), 3em);
-}
-h2::before{
-  counter-increment: Nr;
-  content: "Nr. " counter(Nr) ": ";
-}
-body {
-  background-image: url(Roshi_GT.webp);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-color: rgba(0, 0, 0, 0.895);
-  background-blend-mode: overlay;
-  margin: 0;
-  counter-reset: Nr;
-  color: white;
-}
-/* der letzte Wert der rgba Klammer ist der Opacity Wert  */
-main {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-.schiggiBox {
-  display: felx;
-}
 .schiggi {
   width: 20vh;
 }
@@ -104,12 +116,12 @@ main {
 }
 /* box-shadow macht einen Schatten um das Bild. 5px nach rechts, 10px nach unten, 20px ist das Auslaufen des Schattens, red ist die Farbe */
 #verne {
-  width: clamp(10em, 40em, 45em);
+  width: clamp(10vw, 40vw, 45vw);
   transition: width 0.3s 0.3s ease;
 }
 @media(max-width: 500px){
   #verne{
-    width: 100%;
+    width: 80%;
 }}
 /* unten beschreiben wir, was beim hovern über das Bild passiert. Oben (transition) zeigt an, wie der Übergang funktioniert.
   Hier dauert die Vergrößerung 0.9 Sekunden und es startet erst(ease) nach 0.5 Sekunden */
@@ -181,7 +193,7 @@ Die farbige Box wird ignoriert. Mit absolute kann ich die Bilder ganz frei auf d
   /* Der z-index ist -1, Verne ist also hinter der Überschrift */
 
 #schiggiSticky{
-  width: 100px;
+  width: 10vw;
   position: sticky;
   top: 0;
   right: 0;
@@ -197,22 +209,15 @@ Die farbige Box wird ignoriert. Mit absolute kann ich die Bilder ganz frei auf d
   width: 98%;
 }
 .stickyBoxRight{
-width: 1%;
+width: 10%;
 }
-p {
-  transition: all 0.3s ease;
-  font-size: 1.5rem;
-}
-p:hover {
-  color:#FF7A00;
-  transform: scale(1.01);
-}
+
 
 .contentBox {
   box-shadow: 2px 2px 5px;
   background-color: #210f878e;
   box-shadow: 10px 10px 15px #FF7A00;
-  padding: 50px;
+  padding: 5vw;
   border-radius: 20px;
   margin: 10px;
   transition: all 0.3s ease;
@@ -325,16 +330,16 @@ input:focus{
   .flexboxPseudoKlein{
     width: 60%;
 }}
-.flexboxPseudoKlein p{
-  font-size: 1rem;}
-
+input{
+  width: 30vw;
+}
 .flexboxPseudoKlein::selection{
   background-color: yellowgreen;
   color: red;
 }
 ::marker{
   color: blue;
-  font-size: 20px;
+  font-size: 3vw;
 }
 #firstLetter::first-letter{
   color: blue;
@@ -349,7 +354,7 @@ input:focus{
 
 .flexboxOverflowKlein{
   width: clamp(5em, 25em, 20em);
-  max-height: 150px;
+  max-height: 250px;
   background-color: rgb(0, 0, 0);
   border: solid;
   border-color: #ff7b00b5;
