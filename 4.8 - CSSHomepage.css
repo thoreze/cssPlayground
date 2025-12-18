@@ -4,8 +4,8 @@ main {
 }
 p {
   transition: all 0.3s ease;
-  font-size: 2vw;
-  text-shadow: 2px #FF7A00;
+  font-size: clamp(1em, calc(1vw + 0.5em), 5em);
+  text-shadow: 1px 1px #FF7A00;
 }
 p:hover {
   color:#FF7A00;
@@ -24,7 +24,7 @@ h1{
 /* clamp (dies ist eine Funktion) hat drei Werte, den minimalen, preferierten und den maximalen.
 Auch calc() ist eine Funktion. Das ergebnis ändert sich dynamisch, da die Werte auch relativ sind.  */
 h2 {
-  font-size: clamp(1em, calc(4vw + 0.5em), 3em);
+  font-size: clamp(1em, calc(4vw + 0.5em), 5em);
 }
 
 h2::before{
@@ -240,7 +240,7 @@ width: 10%;
   position: absolute;
   right: 0;
   top: 0;
-  width: 30px;
+  width: 4vw;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.328);
   transition: all 0.3s ease;
@@ -251,7 +251,7 @@ width: 10%;
   letter-spacing: 4px;
 }
 .sideLink:hover{
-  width: 80px;
+  width: 6vw;
   background-color: #ff7b00b5;
   cursor: pointer;
 }
@@ -362,8 +362,8 @@ input:focus{
 }
 
 .flexboxOverflowKlein{
-  width: clamp(5em, 25em, 20em);
-  max-height: 250px;
+  width: clamp(5em, 30vw, 40vw);
+  height: calc(10em + 10vw);
   background-color: rgb(0, 0, 0);
   border: solid;
   border-color: #ff7b00b5;
@@ -371,10 +371,10 @@ input:focus{
   border-radius: 10px 80px 30px 10px;
   margin: 1em;
 }
-@media(max-width: 500px){
+/* @media(max-width: 500px){
   .flexboxOverflowKlein{
     width: 60%;
-}}
+}} */
 #karousselBox{
   margin: 3em auto;
   gap: 5em;
