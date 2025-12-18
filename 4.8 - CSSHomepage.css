@@ -5,6 +5,7 @@ main {
 p {
   transition: all 0.3s ease;
   font-size: 2vw;
+  text-shadow: 2px #FF7A00;
 }
 p:hover {
   color:#FF7A00;
@@ -121,12 +122,12 @@ body {
 }
 @media(max-width: 500px){
   #verne{
-    width: 80%;
+    width: 40vw;
 }}
 /* unten beschreiben wir, was beim hovern über das Bild passiert. Oben (transition) zeigt an, wie der Übergang funktioniert.
   Hier dauert die Vergrößerung 0.9 Sekunden und es startet erst(ease) nach 0.5 Sekunden */
 #verne:hover {
-  width: clamp(12em, 45em, 50em);
+  width: clamp(12vw, 45vw, 50vw);
 }
 /* Das ...:hover nennen wir eine Pseudoklasse */
 #verne:active {
@@ -254,6 +255,11 @@ width: 10%;
   background-color: #ff7b00b5;
   cursor: pointer;
 }
+.sideLink p {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  margin-left: 0;
+}
 #topButton {
   position: fixed;
   right: 90px;
@@ -302,6 +308,11 @@ width: 10%;
 table{
   text-align: left;
 }
+input{
+  width: 30vw;
+  caret-color: #ff6200; 
+}
+/* macht zB den Cursor orange */
 input:focus{
   background-color: rgba(56, 36, 238, 0.466);
 }
@@ -330,9 +341,7 @@ input:focus{
   .flexboxPseudoKlein{
     width: 60%;
 }}
-input{
-  width: 30vw;
-}
+
 .flexboxPseudoKlein::selection{
   background-color: yellowgreen;
   color: red;
@@ -437,4 +446,21 @@ input{
     width: clamp(10em, 12em, 15em);
     padding: 0;
   }
+}
+#columns{
+  /* max-width: 950px; */
+}
+.columnsPictures{
+  columns: 3 300px;
+  column-gap: 1em;
+  border: solid;
+  background-color: #ff6200;
+  padding: 1em;
+}
+.columnsPictures img{
+  border-color: #ff6200;
+  border: solid;
+  background-color: #00d4ff;
+  display: block;
+  margin-bottom: 1em;
 }
