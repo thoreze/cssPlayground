@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+  </head>
+  <body>
+    <h1>Javascript Playground</h1>
+    <p>
+      Auf dieser Seite sollen erste Schritte mit Javascript ausprobiert werden.
+      Auf überladende CSS Elemente wird deshalb verzichtet.
+    </p>
+    <p>
+      Das <strong>Script</strong> (also der Javascript Code) für die jeweilige
+      Aktion, ist im HTML Dokument immer direkt unter den zugehörigen HTML Tags.
+      Somit sind die zugehörigen Codes leichter zu finden.
+    </p>
+    <h2>Console.log()</h2>
+    <p>.............</p>
+    <script type="text/Javascript">
+        //   Console Ereignisse
+        console.log("This is a test");
+        console.warn("Warning");
+        console.error("Error Test");
+    </script>
+    <!-- ************************************************************* -->
+
+    </script>
+    <script>
+        // Schreibt eine Überschrift
+        document.write("<h2>Überschrift mit JS</h2>");
+        document.write(
+            "<p>Die obige Überschrift und dieser Paragraph wurden mit Javascript geschrieben</p>"
+        );
+    </script>
+    <!-- ************************************************************* -->
+
+    <h2 id="überschriftH2">Überschrift ändern</h2>
+    <p>
+      Die obige Überschrift lautet eigentlich "Überschrift ändern", wurde aber
+      mit Javascript zu "Überschrift geändert" geändert.
+    </p>
+    <script>
+      // Ändert die Überschrift mit der ID...zu...
+      document.getElementById("überschriftH2").innerHTML =
+        "Überschrift geändert";
+    </script>
+    <!-- ************************************************************* -->
+
+    <h2 id="überschriftInp">Input Placeholder</h2>
+    <input type="text" id="inp" />
+    <script>
+      //Fügt dem Inputfenster einen Wert hinzu. Sowas wie ein placeholder.
+      document.getElementById("inp").value = "Placeholder";
+    </script>
+    <!-- ************************************************************* -->
+
+    <hr />
+
+    <h2 id="überschriftButton">Buttons</h2>
+    <button id="buttonFarbe" onclick="red()">Überschrift zu Rot</button>
+    <button id="buttonFarbe" onclick="blue()">Überschrift zu Blau</button>
+    <script>
+      // Funktion für das Ändern der Buttonsfarbe
+      function red() {
+        document.getElementById("überschriftButton").innerHTML = "Rot";
+        document.getElementById("überschriftButton").style.color = "red";
+      }
+      function blue() {
+        document.getElementById("überschriftButton").innerHTML = "Blau";
+        document.getElementById("überschriftButton").style.color = "blue";
+      }
+    </script>
+    <!-- ************************************************************* -->
+    <hr />
+
+    <h2 id="überschriftMitInput">Farbe ändern</h2>
+    <p>In das folgende Input Feld kann die Farbe "blau", "rot" oder etwas anderes eingegeben werden. Auf Groß- und Kleinschreibung muss geachtet werden. </p>
+    <input type="text" id="inpFarbe" />
+    <button onclick="farbeÄndern()">ändern</button>
+    <script>
+      function farbeÄndern(farbänderung) {
+        var farbänderung = document.getElementById("inpFarbe").value;
+        if (farbänderung === "blau") {
+          document.getElementById("überschriftMitInput").style.color = "blue";
+        } else if (farbänderung === "rot") {
+          document.getElementById("überschriftMitInput").style.color = "red";
+        } else {
+          document.getElementById("überschriftMitInput").style.color = "black";
+        }
+      }
+    </script>
+    <!-- ************************************************************* -->
+
+  </body>
+</html>
