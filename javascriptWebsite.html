@@ -92,6 +92,59 @@
       }
     </script>
     <!-- ************************************************************* -->
+    
+    <h2 id="überschriftMitInputSwitch">Farbe ändern 2</h2>
+    <p>Hier passiert das gleiche wie zuvor, nur mit dem <strong>Switch Statement.</strong></p>
+    <input type="text" id="inpFarbeSwitch">
+    <button onclick="farbeÄndernSwitch()">ändern</button>
+    <script>
+        function farbeÄndernSwitch(farbeändern){
+            var farbeändern = document.getElementById("inpFarbeSwitch").value;
+            switch (farbeändern) {
+                case "blau":
+                    document.getElementById("überschriftMitInputSwitch").style.color = "blue"                    
+                    break;
+                case "rot":
+                    document.getElementById("überschriftMitInputSwitch").style.color = "red"                    
+                    break;
+                default:
+                    document.getElementById("überschriftMitInputSwitch").style.color = "black"    
+                    break;
+            }
+        }
+    </script>
 
+    <h2>Alters Abfrage</h2>
+    <p>Wie alt bist Du?</p>
+    <p><em>(Hier sind erstmal nur Zahlen erlaubt, keine Worte!)</em></p>
+    <input type="text" id="inpAlter">
+    <button id="buttonAlter" onclick="alter()">commit</button>
+    <p id="outputAlter">.........</p>
+    <script>
+        function alter(alterseingabe) {
+            var alterseingabe = parseInt(document.getElementById("inpAlter").value);
+            if (alterseingabe > 18) {
+                outputAlter.innerHTML = alterseingabe + " Jahre also, Du bist alt genug!"
+                document.getElementById("outputAlter").style.color = "green"
+            } else if (alterseingabe === 18) {
+                outputAlter.innerHTML = alterseingabe + " Jahre passt genau, kein Jahr jünger wäre erlaubt gewesen!"
+            } else {
+                outputAlter.innerHTML = alterseingabe + " Jährchen ist zu jung. Tut mir leid."
+                document.getElementById("outputAlter").style.color = "red"
+            }
+        }
+    </script>
+    <h2>Warenkorb</h2>
+    <p>In dem folgenden Beispiel soll mit jedme Klick die Anzahl im Warenkorb steigen.</p>
+    <button id="buttonWarenkorb" onclick="warenkorb()">In den Warenkorb</button>
+    <p><strong>Warenkorb:</strong></p>
+    <p id="warenkorbMenge">0</p>
+    <script>
+        function warenkorb() {
+            var warenkorbAnzahl = parseInt(document.getElementById("warenkorbMenge").innerText);
+            warenkorbAnzahl ++;
+            document.getElementById("warenkorbMenge").innerText = warenkorbAnzahl;
+        }
+    </script>
   </body>
 </html>
