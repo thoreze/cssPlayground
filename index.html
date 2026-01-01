@@ -51,6 +51,27 @@
 
         <br />
       </div>
+      <!-- Idee -->
+      <div class="contentBox">
+        <h1>Idee dieser Seite</h1>
+        <p>
+          Diese Seite soll lediglich als <strong>Inspiration</strong> und als
+          <strong>Spielplatz</strong> für mich selber dienen!
+        </p>
+        <p>
+          Ich werde den Inhalt hier nicht erklären, sondern nur Beispiele
+          liefern, was man alles so mit CSS, HTML und Javascript machen kann.
+          Erklären können das andere Seiten besser, die ich jeweils verlinken
+          werde.
+        </p>
+        <h3>Legende:</h3>
+        <ul id="legend">
+          <li>🌍Erklärseiten</li>
+          <li>🎬Erklärvideos</li>
+          <li>🏋️Übungsseiten</li>
+        </ul>
+      </div>
+
       <!-- Navigationsleiste -->
       <div class="contentBox">
         <h2>Navigationsleiste</h2>
@@ -209,7 +230,7 @@
       <div id="absolut" class="contentBox">
         <div class="stickyBox">
           <div class="stickyBoxLeft">
-            <h2 style="text-align: center">Positionen</h2>
+            <h2 style="text-align: center" id="positions">Positionen</h2>
             <p>
               Wir haben mehrere Werte, die wir hinter das Attribut
               <em>position:</em> einfügen können.
@@ -227,6 +248,11 @@
               <li>
                 <strong>sticky:</strong> Schiggi am rechten Rand, der sich bei
                 scrollen mitbewegt.
+              </li>
+              <li>
+                <strong>anchor:</strong> Beim Karussel gibt es rechts und links
+                Buttons, um die Bilder zu wechseln. Diese wurden mit einem
+                <em>anchor</em> positioniert
               </li>
             </ul>
 
@@ -491,6 +517,64 @@
         </div>
       </div>
       <a href="#navBar"><button id="topButton">top</button></a>
+      <div id="complexThemes" class="contentBox">
+        <h2>Komplexe Themen</h2>
+        <p>
+          Während die obigen Themen teilweise einzele Attribute oder Werte
+          behandeln, gibt es komplexere Themen, die nur im Zusammenspiel
+          diverser CSS-Attribute funktionieren.
+        </p>
+        <div class="complexThemesFlex">
+          <div class="complexThemesFlexKlein">
+            <h4>Flexbox und Grid</h4>
+            <p>
+              Die beiden großen Themen zur Anordnung von Elementen. <br />
+              Diese Boxen, mit den komplexeren Themen, sind mit der
+              <strong>Flexbox</strong> angeordnet. Im Grund erlaubt mir die
+              Flexbox das Anordnen von Elementen (die sich oft in einer
+              viereckigen Box befinden). Ich kann sie nebeneinander und
+              untereinander anordnen und sie können sich flexibel verschieben,
+              je nachdem wie breit mein Bildschirm ist. Es ist eine sehr moderne
+              Variante, die auf andere Attribute zum zentrieren und verschieben
+              (margin) verzichten kann.
+              <a
+                href="https://www.w3schools.com/css/css3_flexbox.asp"
+                target="_blank"
+                >🌍</a
+              >
+              <a
+                href="https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/"
+                target="_blank"
+                >🌍</a
+              >
+              <a
+                href="https://youtu.be/phWxA89Dy94?si=awbCTMA-geLooP2N"
+                target="_blank"
+                >🎬</a
+              >
+              <a href="https://flexboxfroggy.com/#de" target="_blank">🏋️</a>
+            </p>
+            <p>
+              Ein <strong>Grid</strong> ordnet Elemente in einem Raster an, wie
+              zum Beispiel die Videovorschläge bei Youtube. Beispiel:
+            </p>
+            <div class="gridContainer">
+              <img class="gridItem1" src="Roshi_GT.webp" alt="" />
+              <img class="gridItem2" src="Roshi_GT.webp" alt="" />
+              <img class="gridItem3" src="Roshi_GT.webp" alt="" />
+            </div>
+          </div>
+          <div class="complexThemesFlexKlein">
+            <h4>Animationen</h4>
+          </div>
+          <div class="complexThemesFlexKlein">
+            <h4>SVG</h4>
+          </div>
+          <div class="complexThemesFlexKlein">
+            <h4>Media Queries</h4>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
 </html>
