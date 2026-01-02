@@ -43,7 +43,7 @@ body {
 strong{
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-shadow: none;
-  font-weight: 100
+  font-weight: lighter
 }
 /* der letzte Wert der rgba Klammer ist der Opacity Wert  */
 #navBar {
@@ -289,6 +289,7 @@ width: 10%;
   font-size: 24px;
   cursor: move;
   box-shadow: 0px 0px 20px 5px rgba(64, 6, 224, 0.61);
+  z-index: 1;
 }
 #topButton:hover {
   background: linear-gradient(
@@ -489,17 +490,19 @@ input:focus{
 }
 .gridContainer{
   display: grid;
-  grid-template-columns: 10vw 10vw 10vw 10vw 10vw;
-  grid-template-rows: 10vw 10vw 10vw 10vw 10vw;
-  background-color: #FF7A00
+  grid-template-columns: 10vw 10vw 10vw 10vw;
+  grid-template-rows: 10vw 10vw 10vw 10vw;
+  background-color: #FF7A00;
+  width: 40vw;
+  margin: auto;
 }
 .gridItem1{
-  grid-area: 2 / 2 / 2 / 2;
+  grid-area: 1 / 1 / 3 / 3;
+  background-color: red;
 }
 .gridItem2{
-grid-row: span 2;
-grid-column: span 2;}
+grid-area: 2 / 2  / 4 / 4;
+background-color: green;}
 .gridItem3{
-grid-row: span 2;
-grid-column: span 2;}
-}
+grid-area: 3 / 3 / 5 / 5;
+background-color: yellow;}
