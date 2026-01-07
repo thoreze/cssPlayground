@@ -5,7 +5,8 @@ main {
 p, li, table {
   transition: all 0.3s ease;
   font-size: clamp(1em, calc(1vw + 0.5em), 5em);
-  text-shadow: 1px 1px #FF7A00;
+  text-shadow: 0.5px 0.5px #FF7A00;
+  /* text-shadow: rechts unten */
 }
 p:hover {
   color:#FF7A00;
