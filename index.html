@@ -13,7 +13,7 @@
     <nav id="navBar">
       <ul>
         <li><a href="#navigationsleiste">Navigationsleiste</a></li>
-        <li><a href="#überschrift">Überschrift</a></li>
+        <li><a href="#clamp">Clamp/Calc</a></li>
         <li><a href="#hintergrundbild">Hintergrundbild</a></li>
         <li><a href="#bilder">Bilder</a></li>
         <li><a href="#icon">Icons</a></li>
@@ -23,6 +23,10 @@
         <li><a href="#pseudoElemente">Pseudo-Elemente</a></li>
         <li><a href="#overflow">Overflow</a></li>
         <li><a href="#counter">Counter</a></li>
+        <li><a href="#karoussel">Karussell</a>
+        <li><a href="#columns">Columns</a></li>
+        <li><a href="#complexThemes">Komplexe Themen</a></li>
+        </li>
         <li>
           <a href="4.7 - DiverseNeueHTMLElemente.html">=> zum HTML Content</a>
         </li>
@@ -50,6 +54,14 @@
         >
 
         <br />
+        <marquee 
+        behavior="scroll" 
+        direction="left"
+        scrollamount="12"
+        >Das hier oben ist der <em>marquee</em> Tag. Eine einfache Methode etwas "Animation" auf die Website zu bringen, ohne wirklich etwas zu animieren. 
+          <a href="https://www.w3schools.in/html/marquee-tag" target="_blank">🌍</a>
+          <a href="https://youtu.be/bd9MLIb3DCg?si=mCJx8rY3tBFfKX4E" target="_blank">🎬</a>
+</marquee>
       </div>
       <!-- Idee -->
       <div class="contentBox">
@@ -108,9 +120,16 @@
         <strong>FunFact:</strong> Die Darstellungsgröße von einem Pixel auf dem jeweiligen Gerät
       ist davon abhängig, wie weit das Gerät normalerweise von den Augen entfernt ist. Das ist für die Praxis aber nicht sonderlich relevant. Das Video erklärt diesen komischen Fakt.</p>
 
-      <h4>em, rem, %, vh und vh</h4>
+      <h4>em, rem, %, ch, vh und vh</h4>
       <ul>
-        <li><strong>em:</strong> 1em ist </li>
+        <li><strong>rem:</strong>Für Schriftgrößen ist rem ideal! rem bezieht sich auf das root Element, also die 16px die auf einem Computer als Standard eingestellt sind. Gebe ich einem paragraph eine font-size von 2rem, dann entspricht das 32px.
+        Ein kleinerer Bildschirm hat dann auch eine andere root-Größe. </li>
+        <li><strong>em:</strong> em schaut, wie groß die Schriftgröße des übergeordneten Elements (zB. dem Div) ist (parent). 
+          Hat das Div eine Größe von 30px und hätte der paragraph dort drinnen eine Schriftgröße von 0.5em, dann wird eine Größe von 15px im paragraph angezeigt. Wenn ich z. B. einen Button habe und das padding auf 1em setze, dann beziehen sich die 1em auf die Schriftgröße des Buttons selber (nicht auf das übergeordnete Element).
+        Ein Button mit einer Schriftgröße von 1.5rem und einem padding von 1em passt also die Schriftgröße mit der Bildschirmgröße (root Element) an und damit ändert sich auch das padding, da es sich auf diese SChriftgröße bezieht.</li>
+          <li><strong>%:</strong> % ist immer eine Größe, die abhängig ist von der Größe der Box drumherum. Für Schriftgrößen ungeeignet, aber für die Größen von Boxen ideal. Hat eine Box eine width von 100px und eine Box darin eine width von 80%, dann entspricht das 80px. Schrumpfe ich die äußere Box, dann schrumpf auch die innere.</li>
+          <li><strong>ch:</strong> ch ist das Verhältnis zum width der Zahl "0". Die width der Zahl sinkt natürlich auch mit der Bildschirmgröß<e class=""></e></li>
+          <li><strong>vh und vw:</strong> das "v" steht für viewport und "h" für height bzw. das "w" für width. Die Größe ist also immer davon abhängig, wie breit oder hoch der Bildschirm (viewport) ist. Setze ich eine Box auf 90vw, dann nimmt es immer 90% der Bildschirmweite ein. Auch auf einem kleinen Smartphone.</li>
       </ul>
         <div class="sideLink">
           <p>LEARN</p>
@@ -123,13 +142,18 @@
         </div>
         
        </div>
-      <!-- Überschriftengröße -->
+      <!-- Clamp -->
       <div id="überschrift" class="contentBox">
-        <h2 id="überschrift">Überschriftsgröße</h2>
+        <h2 id="clamp">Clamp und Calc</h2>
         <p>
           die clamp() Funktion kann in die font-size eingebaut werden. Die
-          Schriftgröße wird somit dynamisch angepasst. Zoomen Sie rein und raus
-          und schauen Sie, was die Überschrift macht.
+          Schriftgröße wird somit dynamisch angepasst. Der Syntax ist clamp(Mindestgröße, Präferierte Größe, Maximalgröße)</p>
+          <p> <br>Alle paragraphen haben auf dieser Seite eine Größe von:   <br>
+            <em>font-size: clamp(1em, calc(1vw + 0.5em), 5em)</em> <br>
+            <br>Der präferierte, mittlere Wert wird immer kalkuliert. Hierfür nutzt man die calc() Funktion. 
+            Er ist abhängig von der Bildschirmweite (vw) und der Schriftgröße der übergeordneten Box.
+            Jede Bildschirmgröße hat somit eine passende Schriftgröße, sie wird aber nicht riesig auf einem extra-weitem Bildschirm.
+          
         </p>
         <br />
         <div class="sideLink">
@@ -139,15 +163,14 @@
             target="_blank"
             >🌍</a
           >
-          <a href="" target="_blank">🎬</a>
+          <a href="https://youtu.be/pYW3O0AxpI8?si=vUf-bU0wM4sbw-CD" target="_blank">🎬</a>
         </div>
       </div>
       <!-- Hintergrundbild -->
       <div id="hintergrundbild" class="contentBox">
         <h2>Hintergrundbild</h2>
         <p>
-          Das Hintergrundbild kann man zum Beispiel in den body{} stecken, also
-          es mit CSS ansteuern. Alles Weitere ist aus dem Code zu entnehmen.
+          Das Hintergrundbild kann man zum Beispiel in den body{} stecken. Auch diese Seite hat ein Hintergrundbild, welches aber nur schemenhaft zu erkennen ist.
         </p>
         <br />
         <div class="sideLink">
@@ -157,7 +180,7 @@
             target="_blank"
             >🌍</a
           >
-          <a href="" target="_blank">🎬</a>
+          <a href="https://youtu.be/_oFWg_NlKdo?si=TY6zgDCiRX2evFGN" target="_blank">🎬</a>
         </div>
       </div>
       <!-- Bilderrößen -->
@@ -172,9 +195,10 @@
           Die Größe von Schiggi wird sich verändern. Wenn das nicht gewünscht
           ist, dann setzt man die <br />
           "width: " auf eine absolute Einheit, wie z.B. 100px oder 100cm. <br />
-          Das kann undschön sein, wenn man das Bild verkleinert oder auf dem
+          Das kann unschön sein, wenn man das Bild verkleinert oder auf dem
           Handy öffnet.
         </p>
+        <p>Das letzte Bild nutzt die min() funktion. Die Funktion nimmt immer den kleinsten Wert, welchen ich in die Klammer schreibe</p>
         <div class="schiggiBox">
           <img class="schiggi" src="schiggi.png" alt="Schigiiii" />
           <img class="schiggi2" src="schiggi.png" alt="Schigiiii" />
@@ -189,7 +213,6 @@
             target="_blank"
             >🌍</a
           >
-          <a href="" target="_blank">🎬</a>
         </div>
       </div>
       <!-- Icons -->
@@ -211,15 +234,11 @@
         <br />
         <p>=&gt; WIN + . &lt;=</p>
         <p>öffnet sich das Fenster mit den Emojis.</p>
-        <div style="text-align: center">
-          <a href="#">Nach oben</a>
-        </div>
         <div class="sideLink">
           <p>LEARN</p>
           <a href="https://www.w3schools.com/css/css_icons.asp" target="_blank"
             >🌍</a
           >
-          <a href="" target="_blank">🎬</a>
           <a
             href="https://www.w3schools.com/html/html_emojis.asp"
             target="_blank"
@@ -304,7 +323,7 @@
             target="_blank"
             >🌍</a
           >
-          <a href="" target="_blank">🎬</a>
+          <a href="https://youtu.be/MxEtxo_AaZ4?si=2H4didgoXibt_gQO" target="_blank">🎬</a>
         </div>
       </div>
       <!-- Pseudo-Klassen -->
@@ -363,7 +382,7 @@
             target="_blank"
             >🌍</a
           >
-          <a href="" target="_blank">🎬</a>
+          <a href="https://youtu.be/Nrsy_2ogRfQ?si=W3x982qxacv3aWxV" target="_blank">🎬</a>
         </div>
       </div>
       <!-- Pseudo-Elemente -->
@@ -395,7 +414,7 @@
             target="_blank"
             >🌍</a
           >
-          <a href="" target="_blank">🎬</a>
+          <a href="https://youtu.be/_LxYNxeWpBo?si=mzr7IgJoVVRPWbJd" target="_blank">🎬</a>
         </div>
       </div>
       <!-- Overflow -->
@@ -438,7 +457,7 @@
             target="_blank"
             >🌍</a
           >
-          <a href="" target="_blank">🎬</a>
+          <a href="https://youtu.be/d7cH8geV2dY?si=SGQDpjE7VvK19zhM" target="_blank">🎬</a>
         </div>
       </div>
       <!-- Counter -->
@@ -459,7 +478,7 @@
             target="_blank"
             >🌍</a
           >
-          <a href="" target="_blank">🎬</a>
+          <a href="https://youtu.be/2OnPZd0e1H8?si=_8ua6zQpNAKcqhP_" target="_blank">🎬</a>
         </div>
       </div>
       <!-- Karussell -->
@@ -507,7 +526,7 @@
         </div>
         <div class="sideLink">
           <p>LEARN</p>
-          <a href="" target="_blank">🌍</a>
+          <a href="https://www.w3schools.com/w3css/w3css_slideshow.asp" target="_blank">🌍</a>
           <a href="https://www.youtube.com/watch?v=gmI5nvzv170" target="_blank"
             >🎬</a
           >
@@ -516,6 +535,7 @@
       <!-- Columns -->
       <div id="columns" class="contentBox">
         <h2>Columns</h2>
+        <p>Bild anordnen kann man auf viele Arten. Die <strong>columns</strong> Eigenschaft bietet eine schnelle Variante, die ein Grid oder eine Flexbox umgeht und trotzdem gut aussieht. </p>
         <div class="columnsPictures">
           <img width="300px" src="schiggi.png" alt="" />
           <img width="300px" src="Roshi_GT.webp" alt="" />
@@ -606,6 +626,15 @@
               <div class="gridItem1"></div>
               <div class="gridItem2"></div>
               <div class="gridItem3"></div>
+              <div class="gridItem4"></div> 
+              <div class="gridItem5"></div> 
+              <div class="gridItem6"></div> 
+              <div class="gridItem7"></div> 
+              <div class="gridItem8"></div> 
+              <div class="gridItem9"></div> 
+              <div class="gridItem10"></div> 
+              <div class="gridItem11"></div> 
+
             </div>
           </div>
           <div class="complexThemesFlexKlein">
