@@ -1,0 +1,28 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+:root{
+  --clr-text: white;
+  --clr-shadow: #FF7a00;
+  --clr-strong: #cf5204;
+  --clr-navBar: #210f878e;
+  --clr-hover: yellow;
+  --clr-navBarLink: blue;
+  --clr-selection: yellowgreen;
+  --clr-karBox:#00b0ff;
+  --clr-columnsPic: #00d4ff
+
+}
+#buttonRotate{
+    background-color: var(--clr-navBarLink);
+    color: var(--clr-shadow);
+    border: solid var(--clr-shadow);
+    box-shadow: 0px 0px 10px 5px  white;
+    height: 150px;
+    width:150px;
+    animation-name: --rotation;
+}
+@keyframe rotation{
+    
+}
