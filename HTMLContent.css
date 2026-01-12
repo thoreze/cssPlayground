@@ -48,6 +48,19 @@ h1, h2, h3, h4 {
     padding:5px
 
 }
+meter{
+    width: 10em;
+    height: 2em;
+}
+#fieldsetStyle{
+    padding: 5px;
+    color: var(--clr-navBar);
+    background-color: var(--clr-shadow);
+    text-align: center;
+}
+#fieldsetStyle legend{
+    text-align: center;
+}
 input {
     width: 200px;
     background-color: aquamarine;   
