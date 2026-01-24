@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Javascript</title>
+    <style>
+    
+      .thumbnails img{
+        width: 5em;
+      }
+      #mainDisplay{
+        height: 10em;
+      }
+    </style>
   </head>
   <body>
     <h1>Javascript Playground</h1>
@@ -113,6 +122,7 @@
             }
         }
     </script>
+    <!-- ************************************************************* -->
 
     <h2>Alters Abfrage</h2>
     <p>Wie alt bist Du?</p>
@@ -134,6 +144,8 @@
             }
         }
     </script>
+        <!-- ************************************************************* -->
+
     <h2>Warenkorb</h2>
     <p>In dem folgenden Beispiel soll mit jedme Klick die Anzahl im Warenkorb steigen.</p>
     <button id="buttonWarenkorb" onclick="warenkorb()">In den Warenkorb</button>
@@ -145,6 +157,25 @@
             warenkorbAnzahl ++;
             document.getElementById("warenkorbMenge").innerText = warenkorbAnzahl;
         }
+    </script>
+    <!-- ************************************************************* -->
+    <h2>Swap Image</h2>
+    <p>Das Bild wechselt beim Hovern über die kleineren Bilder.</p>
+    <div class="mainImage">
+      <img id="mainDisplay" src="schiggi.png" alt="Schiggi">
+
+    </div>
+    <div class="thumbnails">
+      <img src="Roshi_GT.webp" alt="Roshi" onmouseover="swapImage(this.src)">
+      <img src="abdurchdiehecke.png" alt="Verne" onmouseover="swapImage(this.src)">
+      <img src="rafael.png" alt="Rafael" onmouseover="swapImage(this.src)">
+      <img src="nemoschildkröte-removebg-preview.png" alt="Nemp" onmouseover="swapImage(this.src)">
+
+    </div>
+    <script>
+      function swapImage(src) { 
+        document.getElementById('mainDisplay').src = src; 
+      }
     </script>
   </body>
 </html>

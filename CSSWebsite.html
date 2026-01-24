@@ -28,9 +28,9 @@
         <li><a href="#complexThemes">Komplexe Themen</a></li>
         </li>
         <li>
-          <a href="HTMLWebsite.html">=> zum HTML Content</a>
+          <a href="HTMLWebsite.html">HTML Content</a>
         </li>
-        <li><a href="javascriptWebsite.html">=> zum Javascript Content</a></li>
+        <li><a href="javascriptWebsite.html">Javascript Content</a></li>
       </ul>
     </nav>
     <main>
@@ -233,8 +233,9 @@
           integriert. Mit den drei Tasten
         </p>
         <br />
-        <p>=&gt; WIN + . &lt;=</p>
+        <p>=&gt; <kbd>WIN</kbd> <kbd>+</kbd> <kbd>.</kbd> &lt;=</p>
         <p>öffnet sich das Fenster mit den Emojis.</p>
+        <p>Wenn wir Emoji größer machen möchten, setzen wir sie am besten in einen span-Tag, geben diesem eine Klasse und ändern die font-size.</p>
         <div class="sideLink">
           <p>LEARN</p>
           <a href="https://www.w3schools.com/css/css_icons.asp" target="_blank"
@@ -303,7 +304,7 @@
                 scrollen mitbewegt.
               </li>
               <li>
-                <strong>anchor:</strong> Beim Karussel gibt es rechts und links
+                <strong>anchor:</strong> Beim <a href="#karoussel">Karussell</a> gibt es rechts und links
                 Buttons, um die Bilder zu wechseln. Diese wurden mit einem
                 <em>anchor</em> positioniert
               </li>
@@ -444,7 +445,7 @@
               ist. Vor allem gilt es zu verstehen, was "hidden" bedeutet.
             </p>
           </div>
-          <div class="flexboxOverflowKlein" style="overflow: visible">
+          <div class="flexboxOverflowKlein" style="overflow: visible;">
             <h4>visible</h4>
             <p>
               Visible ist die Grundeinstellung und müsste nicht extra eingegeben
@@ -454,6 +455,24 @@
             </p>
           </div>
         </div>
+
+        <div class="flexboxOverflowX">
+          <div class="flexboxOverflowXCard"><span class="emoji">➡️</span></div>
+          <div class="flexboxOverflowXCard"><span class="emoji">😎</span></div>
+          <div class="flexboxOverflowXCard"><span class="emoji">😍</span></div>
+          <div class="flexboxOverflowXCard"><span class="emoji">🥰</span></div>
+          <div class="flexboxOverflowXCard"><span class="emoji">😘</span></div>
+          <div class="flexboxOverflowXCard"><span class="emoji">🫥</span></div>
+          <div class="flexboxOverflowXCard"><span class="emoji">😑</span></div>
+          <div class="flexboxOverflowXCard"><span class="emoji">😶</span></div>
+          <div class="flexboxOverflowXCard"><span class="emoji">😶‍🌫️</span></div>
+          <div class="flexboxOverflowXCard"><span class="emoji">⬅️</span></div>
+
+        </div>
+                <p>Das obige Beispiel ist ein Overflow-x (Scroll) mit einer Flexbox. Diese Lösung nutzt zum Beispiel Netflix für die Filmvorschläge in den jeweiligen Kategorie.
+          Es ist platzsparend und eine gute Alternative zum Grid, welches in den komplexeren Themen weiter unten zu finden ist. 
+          Mit ein wenig Anpassungen kann man daraus ein sogenanntes <a href="#karoussel">Karussell</a> oder eine Slide-Show machen.</p>
+
         <div class="sideLink">
           <p>LEARN</p>
           <a

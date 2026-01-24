@@ -65,6 +65,10 @@ strong{
   color: var(--clr-strong);
 }
 /* der letzte Wert der rgba Klammer ist der Opacity Wert  */
+kbd{
+    border-radius: 2px;
+    padding: 2px;
+    border: 1px solid black;}
 #navBar {
   background-color: var(--clr-navBar);
   overflow: hidden;
@@ -75,18 +79,20 @@ strong{
 }
 #navBar ul {
   list-style-type: none;
-  padding: 0;
-  margin: 0;
 }
 /* hsl (hue, saturation, lightness) => Farbton, Sättigkeit, Helligkeit */
 
 #navBar a {
   text-decoration: none;
-  padding: 15px;
+  padding: .1em;
   display: block;
   text-align: center;
   text-shadow: none;
   font-size: clamp(1em, calc(0.5vw + 0.5em), 5em);
+}
+#navBar a::first-letter {
+  color: var(--clr-strong);
+    font-size: clamp(1em, calc(0.5vw + 0.7em), 5em);
 }
 #navBar a:visited {
   color: var(--clr-shadow);
@@ -405,6 +411,30 @@ input:focus{
   overflow: hidden;
   border-radius: 10px 80px 30px 10px;
   margin: 0.5em;
+}
+.flexboxOverflowX{
+  display: flex;
+  gap: 1em;
+  width: 80%;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  margin-top: 7em;
+}
+.flexboxOverflowXCard{
+  width: 25em;
+  flex-shrink: 0;
+  background-color: var(--clr-karBox);
+  scroll-snap-align: start;
+  aspect-ratio: 3 / 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.emoji{
+  font-size: 10em ;
 }
 /* @media(max-width: 500px){
   .flexboxOverflowKlein{
