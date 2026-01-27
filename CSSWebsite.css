@@ -24,6 +24,8 @@ p, li, table {
   font-size: clamp(1em, calc(1vw + 0.5em), 5em);
   text-shadow: 0.5px 0.5px var(--clr-shadow);
   /* text-shadow: rechts unten */
+  /* text-wrap: balance; */
+  /* text-align: center; */
 }
 p:hover {
   color:var(--clr-shadow);
