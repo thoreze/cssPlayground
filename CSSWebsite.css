@@ -214,6 +214,11 @@ kbd{
 #verne:active {
   box-shadow: 5px 10px 20px rgb(51, 26, 212);
 }
+#schiggiReflect{
+    width: clamp(6vw, 20vw, 30vw);
+    -webkit-box-reflect: below 0 linear-gradient(transparent, #0005);
+
+}
 
 /* active heißt, dass etwas beim anklicken passiert. */
 #testButton {
@@ -530,6 +535,9 @@ input:focus{
   background-color: var(--clr-columnsPic);
   display: block;
   margin-bottom: 1em;
+}
+#columnsText{
+  columns: 3;
 }
 .complexThemesFlex{
   display: flex;
